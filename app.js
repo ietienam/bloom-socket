@@ -3,7 +3,7 @@ var app = express();
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 io.on("connection", function (socket) {
   console.log("new connection made");
